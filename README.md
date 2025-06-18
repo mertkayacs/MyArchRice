@@ -41,9 +41,6 @@ This rice focused on:
 > Another View
 ![Screenshot](screenshots/2.png)
 
-> Wallpaper
-![Screenshot](screenshots/wp.png)
-
 ---
 
 ### 🧰 Modules Used
