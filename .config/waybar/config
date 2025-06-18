@@ -1,0 +1,136 @@
+{
+  "layer": "top",
+  "position": "bottom",
+
+  "modules-left": [
+    "clock",
+    "custom/launcher",
+    "custom/files",
+    "custom/media",
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "hyprland/window"
+  ],
+
+  "modules-right": [
+    "tray",
+    "custom/weather",
+    "custom/battery",
+    "custom/volume",
+    "custom/sysinfo",
+    "custom/screenshot",
+    "custom/suspend",
+    "custom/logout",
+    "custom/shutdown"
+  ],
+
+  "custom/launcher": {
+    "format": "",
+    "on-click": "rofi -show drun",
+    "tooltip": "Launcher"
+  },
+
+    "custom/sysmon": {
+    "format": "",
+    "tooltip": "System Monitor",
+    "on-click": "btop"
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "all-outputs": true,
+    "format-icons": {
+      "active": "",
+      "default": ""
+    }
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "icon": true,
+    "max-length": 30
+  },
+
+  "custom/bluetooth": {
+    "format": "󰂯 Bluetooth",
+    "on-click": "blueman-manager",
+    "interval": 10
+  },
+
+  "custom/weather": {
+    "exec": "~/.config/waybar/scripts/weather.sh",
+    "return-type": "json",
+    "interval": 600
+  },
+
+  "custom/battery": {
+    "format": " {}",
+    "exec": "acpi | cut -d',' -f2 | tr -d ' '",
+    "on-click": "gnome-power-statistics",
+    "interval": 30
+  },
+
+  "custom/volume": {
+    "format": " {}%",
+    "exec": "pamixer --get-volume",
+    "on-click": "pavucontrol",
+    "interval": 1
+  },
+
+  "custom/screenshot": {
+  "format": "",
+  "tooltip": "Take Screenshot",
+  "on-click": "grim -g \"$(slurp)\" ~/Pictures/screenshot_$(date +%Y%m%d_%H%M%S).png && notify-send 'Screenshot saved'"
+  },
+
+  "custom/suspend": {
+    "format": "🌙",
+    "tooltip": "Suspend",
+    "on-click": "systemctl suspend"
+  },
+  "custom/logout": {
+    "format": "🔒",
+    "tooltip": "Logout",
+    "on-click": "hyprctl dispatch exit"
+  },
+  "custom/shutdown": {
+    "format": "⏻",
+    "tooltip": "Shutdown",
+    "on-click": "systemctl poweroff"
+  },
+
+  
+  "custom/files": {
+    "format": "",
+    "tooltip": "Open File Manager",
+    "on-click": "nemo"
+  },
+
+  "clock": {
+    "format": "{:%a %d %b  |  %H:%M}",
+    "tooltip-format": "{:%A, %d %B %Y\n%H:%M:%S}",
+    "interval": 60,
+    "on-click": "gnome-calendar"
+  },
+
+  "custom/sysinfo": {
+    "exec": "~/.config/waybar/scripts/sysinfo.sh",
+    "interval": 10,
+    "return-type": "json"
+  },
+
+  "custom/media": {
+    "exec": "~/.config/waybar/scripts/media.sh",
+    "return-type": "json",
+    "on-click": "playerctl play-pause",
+    "interval": 5
+  }
+
+
+
+
+}
+

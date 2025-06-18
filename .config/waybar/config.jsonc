@@ -1,0 +1,84 @@
+{
+  "layer": "top",
+  "position": "bottom",
+
+  "modules-left": [
+    "custom/launcher",
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [
+    "hyprland/window",
+    "custom/bluetooth"
+  ],
+
+  "modules-right": [
+    "tray",
+    "custom/weather",
+    "custom/battery",
+    "custom/volume",
+    "custom/screenshot",
+    "custom/power"
+  ],
+
+  "custom/launcher": {
+    "format": "",
+    "on-click": "rofi -show drun",
+    "tooltip": "Launcher"
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "all-outputs": true,
+    "sort-by-number": true,
+    "format-icons": {
+      "active": "",
+      "default": ""
+    }
+  },
+
+  "hyprland/window": {
+    "format": "{}",
+    "icon": true,
+    "max-length": 30
+  },
+
+  "custom/bluetooth": {
+    "format": "󰂯 Bluetooth",
+    "on-click": "blueman-manager",
+    "interval": 10
+  },
+
+  "custom/weather": {
+  "exec": "~/.config/waybar/scripts/weather.sh",
+  "return-type": "json",
+  "interval": 600
+  },
+
+  "custom/battery": {
+    "format": " {}",
+    "exec": "acpi | cut -d',' -f2 | tr -d ' '",
+    "on-click": "gnome-power-statistics",
+    "interval": 30
+  },
+
+  "custom/volume": {
+    "format": " {}%",
+    "exec": "pamixer --get-volume",
+    "on-click": "pavucontrol",
+    "interval": 5
+  },
+
+  "custom/screenshot": {
+  "format": "",
+  "tooltip": "Take Screenshot",
+  "on-click": "grim -g \"$(slurp)\" ~/Pictures/screenshot_$(date +%Y%m%d_%H%M%S).png && notify-send 'Screenshot saved'"
+  },
+
+  "custom/power": {
+    "format": "⏻",
+    "tooltip": "Shutdown",
+    "on-click": "systemctl poweroff"
+  }
+}

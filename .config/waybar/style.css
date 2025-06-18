@@ -1,0 +1,86 @@
+* {
+  font-family: JetBrainsMono Nerd Font, sans-serif;
+  font-size: 14px;
+  color: #cdd6f4;
+}
+
+window#waybar {
+  background-color: #1e1e2e;
+  border-top: 1px solid #313244;
+}
+
+#battery, #tray {
+  padding: 0 0px;
+}
+
+#clock {
+  color: #d4fff8;
+  padding: 0 10px;
+}
+
+
+#custom-screenshot {
+  color: #89dceb;
+  padding: 0 10px;
+}
+
+#custom-volume {
+  color: #fffc50;
+  padding: 0 10px;
+}
+
+#custom-battery {
+  color: #89b4fa;
+  padding: 0 10px;
+}
+
+#custom-suspend {
+  color: #94e2d5;
+  padding: 0 8px;
+}
+
+#custom-logout {
+  color: #f9e2af;
+  padding: 0 8px;
+}
+
+#custom-shutdown {
+  color: #f38b8b;
+  padding: 0 8px;
+}
+
+
+#custom-files {
+  color: #fdf290;
+  padding: 0 10px;
+}
+
+#custom-bluetooth {
+  color: #94e2d5;
+  padding: 0 0px;
+}
+
+#custom-weather {
+  color: #fab387;
+  padding: 0 10px;
+}
+
+#custom-launcher {
+  color: #cba6f7;
+  padding: 0 10px;
+}
+
+#custom-sysmon {
+  color: #cba6f7;
+  padding: 0 10px;
+}
+
+#custom-sysinfo {
+  color: #ff723b;
+  padding: 0 10px;
+}
+
+#custom-media {
+  color: #a6e3a1;
+  padding: 0 10px;
+}
