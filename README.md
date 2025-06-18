@@ -36,13 +36,13 @@ This rice focused on:
 ### 🖼️ Screenshots
 
 > Desktop overview:
-![Screenshot 1](screenshots/1.png)
+![Screenshot](screenshots/1.png)
 
 > Another View
-![Screenshot 3](screenshots/2.png)
+![Screenshot](screenshots/2.png)
 
 > Wallpaper
-![Screenshot 4](screenshots/wp.png)
+![Screenshot](screenshots/wp.png)
 
 ---
 
