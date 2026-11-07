@@ -5,7 +5,7 @@
   </picture>
 </p>
 
-<h1 align="center">A Hyprland desktop built from scratch. Every script and style sheet is here.</h1>
+<h1 align="center">A Hyprland desktop built from scratch.<br>Every script and style sheet is here.</h1>
 
 <p align="center">
   Arch Linux and Hyprland dotfiles, kept as a snapshot from June 2025.<br>
@@ -54,42 +54,42 @@ One repository holds the whole desktop, from the compositor to the bar scripts.
   <tr>
     <td width="50%" valign="top">
       <picture>
-        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/desktop-dark.webp">
-        <img src="docs/assets/readme/tour/desktop-light.webp" alt="Hyprland desktop over a dusk city wallpaper with a Waybar status bar at the bottom">
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/sysinfo-dark.webp">
+        <img src="docs/assets/readme/tour/sysinfo-light.webp" alt="Code card of sysinfo.sh reading CPU load, CPU temperature and RAM usage">
       </picture>
-      <h3>The desktop</h3>
-      Hyprland with Waybar along the bottom edge, showing the clock, workspaces, weather, battery and volume.
+      <h3>System info script</h3>
+      CPU load, CPU temperature and RAM usage are read with top, sensors and free for the Waybar module.
     </td>
     <td width="50%" valign="top">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/hyprland-dark.webp">
-        <img src="docs/assets/readme/tour/hyprland-light.webp" alt="Code card of hyprland.conf with the gestures, animations, dwindle and decoration blocks">
+        <img src="docs/assets/readme/tour/hyprland-light.webp" alt="Code card of hyprland.conf with the animation, dwindle and decoration blocks">
       </picture>
       <h3>Hyprland config</h3>
-      Workspace swipe gestures, a sliding window animation, the dwindle layout and rounded corners.
+      A sliding window animation, the dwindle layout and rounded corners.
     </td>
   </tr>
   <tr>
     <td width="50%" valign="top">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/waybar-dark.webp">
-        <img src="docs/assets/readme/tour/waybar-light.webp" alt="Code card of the Waybar config listing the left, center and right modules">
+        <img src="docs/assets/readme/tour/waybar-light.webp" alt="Code card of the Waybar config with the center and right module lists">
       </picture>
       <h3>Waybar modules</h3>
-      Clock, launcher, media and workspaces on the left, the active window in the center, and weather, battery, volume and tray on the right.
+      The active window sits in the center. The right side lists the tray, weather, battery, volume, system info, screenshot and suspend modules.
     </td>
     <td width="50%" valign="top">
       <picture>
         <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/weather-dark.webp">
-        <img src="docs/assets/readme/tour/weather-light.webp" alt="Code card of weather.sh with the live request and the cache fallback">
+        <img src="docs/assets/readme/tour/weather-light.webp" alt="Code card of weather.sh with the cache fallback">
       </picture>
       <h3>Weather script</h3>
-      A request to Open-Meteo with a two-second timeout, and a cached reading as the fallback.
+      When the request returns nothing, the script reads the cached reading, or prints a warning if there is no cache. A good response refreshes the cache.
     </td>
   </tr>
 </table>
 
-<p align="center"><sub>The desktop is a screenshot of the running setup. Code cards show the files as they are in the repository.</sub></p>
+<p align="center"><sub>Code cards show the files as they are in the repository.</sub></p>
 
 ## Features
 
