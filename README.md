@@ -48,6 +48,49 @@ One repository holds the whole desktop, from the compositor to the bar scripts.
 | <img src="docs/assets/readme/icons/palette.svg" width="18" height="18" alt=""> **A readable theme** | The Arc-Blue-sky-Dark GTK theme, Papirus-Dark icons and Catppuccin Mocha cursors are set in [hyprland.conf](.config/hypr/hyprland.conf). |
 | <img src="docs/assets/readme/icons/keyboard.svg" width="18" height="18" alt=""> **Touch and keyboard** | Workspace swipe gestures run through libinput-gestures, and the config starts Waybar, dunst, MPD, Bluetooth and network applets at login. |
 
+## A quick tour
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/desktop-dark.webp">
+        <img src="docs/assets/readme/tour/desktop-light.webp" alt="Hyprland desktop over a dusk city wallpaper with a Waybar status bar at the bottom">
+      </picture>
+      <h3>The desktop</h3>
+      Hyprland with Waybar along the bottom edge, showing the clock, workspaces, weather, battery and volume.
+    </td>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/hyprland-dark.webp">
+        <img src="docs/assets/readme/tour/hyprland-light.webp" alt="Code card of hyprland.conf with the gestures, animations, dwindle and decoration blocks">
+      </picture>
+      <h3>Hyprland config</h3>
+      Workspace swipe gestures, a sliding window animation, the dwindle layout and rounded corners.
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/waybar-dark.webp">
+        <img src="docs/assets/readme/tour/waybar-light.webp" alt="Code card of the Waybar config listing the left, center and right modules">
+      </picture>
+      <h3>Waybar modules</h3>
+      Clock, launcher, media and workspaces on the left, the active window in the center, and weather, battery, volume and tray on the right.
+    </td>
+    <td width="50%" valign="top">
+      <picture>
+        <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/tour/weather-dark.webp">
+        <img src="docs/assets/readme/tour/weather-light.webp" alt="Code card of weather.sh with the live request and the cache fallback">
+      </picture>
+      <h3>Weather script</h3>
+      A request to Open-Meteo with a two-second timeout, and a cached reading as the fallback.
+    </td>
+  </tr>
+</table>
+
+<p align="center"><sub>The desktop is a screenshot of the running setup. Code cards show the files as they are in the repository.</sub></p>
+
 ## Features
 
 **Desktop**
