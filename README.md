@@ -1,130 +1,128 @@
-# Arch Linux + Hyprland Rice Showcase by Mert Kaya
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/brand/svg/myarchrice-logo-on-dark.svg">
+    <img src="docs/brand/svg/myarchrice-logo-on-light.svg" alt="MyArchRice" width="260">
+  </picture>
+</p>
 
-Welcome to my personal Arch Linux + Hyprland rice setup. This was my playground for learning the deep internals of Linux, Wayland compositors, and customization from scratch. Now that I'm moving to Linux Mint for stability and daily usage, I'm preserving and sharing this build as a milestone in my Linux journey.
+<h1 align="center">A Hyprland desktop built from scratch. Every script and style sheet is here.</h1>
 
----
+<p align="center">
+  Arch Linux and Hyprland dotfiles, kept as a snapshot from June 2025.<br>
+  <b>Hyprland, Waybar, Rofi and the helper scripts behind the bar.</b>
+</p>
 
-## 🌟 Summary
+<p align="center">
+  <img alt="Arch Linux" src="https://img.shields.io/badge/Arch%20Linux-1793D1?style=flat-square&logo=archlinux&logoColor=white">
+  <img alt="Compositor: Hyprland" src="https://img.shields.io/badge/compositor-Hyprland-3E5C76?style=flat-square">
+  <img alt="Bar: Waybar" src="https://img.shields.io/badge/bar-Waybar-3E5C76?style=flat-square">
+  <img alt="9 helper scripts" src="https://img.shields.io/badge/helper%20scripts-9-2F6B4F?style=flat-square">
+  <a href="https://github.com/mertkayacs/MyArchRice"><img alt="GitHub stars" src="https://img.shields.io/github/stars/mertkayacs/MyArchRice?style=flat-square&logo=github&color=8A6D3B"></a>
+</p>
 
-- **WM:** Hyprland (Wayland compositor)
-- **Bar:** Waybar
-- **Terminal:** Kitty
-- **Launcher:** Rofi
-- **Notifications:** Dunst
-- **File Manager:** Thunar
-- **Theme:** Arc-Blue-sky-Dark
-- **Icon Theme:** Papirus-Dark
-- **Cursor Theme:** Catppuccin-Mocha-Dark
-- **Music Controls:** ncmpcpp + custom notifier
-- **Weather Widget:** custom `weather.sh` using Open-Meteo
-- **Wallpaper Manager:** swaybg
+<p align="center">
+  <a href="#quick-start"><img alt="Quick start" src="https://img.shields.io/badge/Quick%20start-3E5C76?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIj48cGF0aCBkPSJNMTIgMTV2NXMzLjAzLS41NSA0LTJjMS4wOC0xLjYyIDAtNSAwLTUiLz48cGF0aCBkPSJNNC41IDE2LjVjLTEuNSAxLjI2LTIgNS0yIDVzMy43NC0uNSA1LTJjLjcxLS44NC43LTIuMTMtLjA5LTIuOTFhMi4xOCAyLjE4IDAgMCAwLTIuOTEtLjA5Ii8%2BPHBhdGggZD0iTTkgMTJhMjIgMjIgMCAwIDEgMi0zLjk1QTEyLjg4IDEyLjg4IDAgMCAxIDIyIDJjMCAyLjcyLS43OCA3LjUtNiAxMWEyMi40IDIyLjQgMCAwIDEtNCAyeiIvPjxwYXRoIGQ9Ik05IDEySDRzLjU1LTMuMDMgMi00YzEuNjItMS4wOCA1IC4wNSA1IC4wNSIvPjwvZz48L3N2Zz4%3D&logoColor=white"></a>
+  <a href=".config/hypr/hyprland.conf"><img alt="Hyprland config" src="https://img.shields.io/badge/Hyprland%20config-1E2A38?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIj48cGF0aCBkPSJNNiAyMmEyIDIgMCAwIDEtMi0yVjRhMiAyIDAgMCAxIDItMmg4YTIuNCAyLjQgMCAwIDEgMS43MDQuNzA2bDMuNTg4IDMuNTg4QTIuNCAyLjQgMCAwIDEgMjAgOHYxMmEyIDIgMCAwIDEtMiAyeiIvPjxwYXRoIGQ9Ik0xNCAydjVhMSAxIDAgMCAwIDEgMWg1Ii8%2BPHBhdGggZD0iTTEwIDEyLjUgOCAxNWwyIDIuNSIvPjxwYXRoIGQ9Im0xNCAxMi41IDIgMi41LTIgMi41Ii8%2BPC9nPjwvc3ZnPg%3D%3D&logoColor=white"></a>
+  <a href="scripts"><img alt="Scripts" src="https://img.shields.io/badge/Scripts-1E2A38?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ij48ZyBmaWxsPSJub25lIiBzdHJva2U9IiNmZmZmZmYiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIj48cGF0aCBkPSJNMTIgMTloOCIvPjxwYXRoIGQ9Im00IDE3IDYtNi02LTYiLz48L2c%2BPC9zdmc%2B&logoColor=white"></a>
+</p>
 
----
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/assets/readme/hero-dark.webp">
+    <img src="docs/assets/readme/hero-light.webp" alt="Hyprland desktop on Arch Linux with a Waybar status bar showing the date, workspace icons, weather, battery, volume and CPU over a dusk city wallpaper" width="960">
+  </picture>
+</p>
 
-## 🧠 Philosophy
-
-This rice focused on:
-
-- Minimal, clean interface
-- Blended workspace navigation via gestures and keybinds
-- Subtle animations for windows
-- Waybar with CPU, RAM, Weather, Music, Power controls
-- Offline-resilient scripts (e.g., weather cache fallback)
-
----
-
-### 🖼️ Screenshots
-
-> Desktop overview:
-![Screenshot](screenshots/1.png)
-
-> Another View
-![Screenshot](screenshots/2.png)
+MyArchRice is my Arch Linux and Hyprland desktop, published as dotfiles. It began as a way to learn Linux internals and Wayland compositors from scratch. The repository holds the Hyprland, Waybar and Rofi configuration, GTK and cursor settings, and the scripts that feed the bar. I am moving to Linux Mint, so this build stays here as a snapshot.
 
 ---
 
-### 🧰 Modules Used
+## Why MyArchRice
 
-- Volume & Brightness Controls
-- Workspace Indicators
-- Spotify/MPD support
-- Live Weather (fallback enabled)
-- Power Controls (Suspend, Logout, Shutdown)
+One repository holds the whole desktop, from the compositor to the bar scripts.
 
----
+|  |  |
+|---|---|
+| <img src="docs/assets/readme/icons/layout-grid.svg" width="18" height="18" alt=""> **The full stack** | Hyprland with gestures and window animations, Waybar with its style sheet, and four Rofi themes for the launcher, list launcher, touch launcher and power menu. |
+| <img src="docs/assets/readme/icons/terminal.svg" width="18" height="18" alt=""> **Scripts behind the bar** | Nine shell scripts cover weather from Open-Meteo with a cached fallback, CPU temperature, media status, system info, power menu, idle handling, a music change notifier and a sidebar toggle. |
+| <img src="docs/assets/readme/icons/palette.svg" width="18" height="18" alt=""> **A readable theme** | The Arc-Blue-sky-Dark GTK theme, Papirus-Dark icons and Catppuccin Mocha cursors are set in [hyprland.conf](.config/hypr/hyprland.conf). |
+| <img src="docs/assets/readme/icons/keyboard.svg" width="18" height="18" alt=""> **Touch and keyboard** | Workspace swipe gestures run through libinput-gestures, and the config starts Waybar, dunst, MPD, Bluetooth and network applets at login. |
 
-## 📂 Repo Structure
+## Features
 
-```bash
-arch-hyprland-custom/
-├── .config/
-│   ├── hypr/                # Hyprland config
-│   ├── waybar/              # Waybar JSON config + styles
-│   ├── rofi/                # Launcher styling
-│   ├── kitty/               # Terminal styling
-│   ├── dunst/               # Notification styling
-├── scripts/                 # Custom bash scripts
-│   ├── weather.sh           # Weather info via Open-Meteo
-│   ├── ncmpcppnotif.sh      # Music change notifier
-├── wallpapers/              # Custom wallpaper(s)
-├── screenshots/             # Desktop screenshots
-├── LICENSE
-└── README.md                # This file
-```
+**Desktop**
 
----
+- Hyprland tiling with every window forced to tile, rounded corners and a sliding overshoot animation.
+- Wallpaper through swaybg and a clipboard history started at login.
 
-## ⚙️ Requirements
+**Waybar**
 
-Install the following tools:
+- Modules for workspaces, CPU, RAM, weather, music and power controls.
+- Weather falls back to a cached reading when the network is down.
 
-```bash
+**Rofi**
+
+- Launcher, list launcher, touch launcher and power menu themes.
+- A Spotlight-style script with a web search helper.
+
+## Quick start
+
+Install the packages on Arch Linux:
+
+```sh
 sudo pacman -S hyprland waybar kitty rofi dunst thunar swaybg playerctl jq curl brightnessctl pamixer ncmpcpp mpd
 ```
 
-Optional AUR packages:
+The theme packages are optional AUR installs:
 
-```bash
+```sh
 yay -S catppuccin-cursors-mocha papirus-icon-theme arc-theme
 ```
 
----
+Copy the configuration and reload Hyprland:
 
-## 🚀 Getting Started
-
-Clone the repo:
-
-```bash
-git clone https://github.com/mert-kaya/arch-hyprland-custom.git
-cd arch-hyprland-custom
-```
-
-Copy configs:
-
-```bash
+```sh
+git clone https://github.com/mertkayacs/MyArchRice.git
+cd MyArchRice
 cp -r .config/* ~/.config/
-cp -r scripts ~/
-```
-
-Reload Hyprland:
-
-```bash
+cp -r scripts Pictures ~/
 hyprctl reload
 ```
 
----
+### Requirements
 
-## ❤️ Thanks To
+- Arch Linux with Hyprland and Waybar.
+- The config also starts blueman-applet, nm-applet, libinput-gestures, wl-clipboard-history and megasync. Remove the lines for tools you do not use.
+- The weather script has fixed coordinates. Change the latitude and longitude in [scripts/weather.sh](scripts/weather.sh) to your own.
 
-- [Hyprland](https://github.com/hyprwm/Hyprland)
-- [Waybar](https://github.com/Alexays/Waybar)
-- [Catppuccin](https://github.com/catppuccin/cursors)
-- [Papirus Icon Theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme)
-- [Arch Wiki](https://wiki.archlinux.org/) for always being my sensei
+## FAQ
 
----
+<details>
+<summary><b>Is this maintained?</b></summary>
 
-Enjoy the rice. Improve it. Fork it. Break it. Rebuild it.
+It is a snapshot from June 2025. I moved on to Linux Mint, and the repository stays as a record of this setup.
+</details>
 
-*Mert Kaya*  
-*2025*
+<details>
+<summary><b>Do I need the AUR packages?</b></summary>
+
+They are optional. Without them the theme settings in hyprland.conf fall back to what you have installed.
+</details>
+
+<details>
+<summary><b>How do I change the weather location?</b></summary>
+
+Edit the coordinates in `scripts/weather.sh`. It uses Open-Meteo, which needs no API key.
+</details>
+
+<details>
+<summary><b>Which terminal and launcher does it use?</b></summary>
+
+Kitty opens with SUPER+T and Rofi is the launcher. The repository ships no Kitty or dunst configuration.
+</details>
+
+If MyArchRice is useful to you, a ⭐ helps other people find it.
+
+Photos behind the screenshots are credited in [docs/assets/readme/CREDITS.md](docs/assets/readme/CREDITS.md).
+
+[![views](https://hits.sh/github.com/mertkayacs/MyArchRice.svg?view=today-total&style=flat-square&label=views&color=3E5C76&labelColor=1E2A38)](https://github.com/mertkayacs/MyArchRice)
